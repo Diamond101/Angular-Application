@@ -1,0 +1,42 @@
+<div style="overflow:auto"> 
+    <div class="mat-elevation-z8">
+<table mat-table [dataSource]="listData" class="mat-elevation-z8">
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; colums:displayedColumns;"></mat-row>
+<mat-header-cell *matHeaderCellDef></mat-header-cell>
+<ng-container matColumnDef="Options">
+<mat-hearder-cell *matHeaderCellDef>Option</mat-hearder-cell>
+<mat-cell *matCellDef="let row"></mat-cell>
+<button mat-icon-button (click)="onEdit(row)">
+<mat-icon>launch </mat-icon>   
+</button>
+<button mat-icon-button color="warn" (click)="onDelete(row.id)">
+<mat-icon>delete_outline </mat-icon>   
+</button>
+</ng-container>
+<ng-container matColumnDef="id">
+<mat-header-cell *matHeaderCellDef>id</mat-header-cell>
+<mat-header-cell *matCellDef="let element">{{element.id}}</mat-header-cell>
+</ng-container>
+<ng-container matColumnDef="SBU_Code">
+<mat-header-cell *matHeaderCellDef>SBU_Code</mat-header-cell>
+<mat-header-cell *matCellDef="let element">{{element.SBU_Code}}</mat-header-cell>
+</ng-container>
+<ng-container matColumnDef="SBU_Name">
+<mat-header-cell *matHeaderCellDef>SBU_Name</mat-header-cell>
+<mat-header-cell *matCellDef="let element">{{element.SBU_Name}}</mat-header-cell>
+</ng-container>
+<ng-container matColumnDef="Telephone">
+<mat-header-cell *matHeaderCellDef>Telephone</mat-header-cell>
+<mat-header-cell *matCellDef="let element">{{element.Telephone}}</mat-header-cell>
+</ng-container>
+<ng-container matColumnDef="SBU_Email">
+<mat-header-cell *matHeaderCellDef>SBU_Email</mat-header-cell>
+<mat-header-cell *matCellDef="let element">{{element.SBU_Email}}</mat-header-cell>
+</ng-container>
+  </table>
+    </div>
+</div>
+  
+  
